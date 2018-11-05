@@ -28,6 +28,7 @@ export function getMutationDefinition(
 
 // Checks the document for errors and throws an exception if there is an error.
 export function checkDocument(doc: DocumentNode) {
+console.info('doc', doc);
   if (doc.kind !== 'Document') {
     throw new Error(`Expecting a parsed GraphQL document. Perhaps you need to wrap the query \
 string in a "gql" tag? http://docs.apollostack.com/apollo-client/core.html#gql`);
